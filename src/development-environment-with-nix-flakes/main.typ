@@ -20,7 +20,18 @@
 #set document(title: title, author: author)
 #set heading(numbering: "1.")
 #set quote(block: true)
-#show raw.where(block: false): box.with(fill: luma(240), inset: (x: 2pt, y: -1pt), outset: (y: 3pt), radius: 2pt)
+
+#show raw.where(block: false): box.with(
+  fill: luma(240),
+  inset: (x: 2pt, y: 0pt),
+  outset: (y: 1.5pt),
+  radius: 2pt
+)
+#show raw.where(block: true): block.with(
+  fill: luma(240),
+  inset: 5pt,
+  radius: 4pt
+)
 
 #titlepage(title: title, paper: paper, font: font, lang: lang, author: author)
 
@@ -73,4 +84,16 @@ Bashプロンプトが表示されたら、以下のコマンド群を入力し�
   ```
 ]
 
-Nix flakesでは、`nix`というコマンドを主に使います。このコマンドにはサブコマンドがたくさん用意されています。`man nix`
+Nix flakesでは、`nix`というコマンドを主に使います。このコマンドにはサブコマンドがたくさん用意されています。`man nix`で検索してみましょう。
+
+#sourcecode()[
+  ```bash
+    # よく使うサブコマンドのリスト
+    # 筆者はこんな辺りをよく使う…かも
+    nix build
+    nix develop
+    nix shell
+    nix repl
+    nix flake
+  ```
+]
