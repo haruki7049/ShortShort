@@ -89,7 +89,9 @@ Nix flakesでは、`nix`というコマンドを主に使います。このコ�
 #sourcecode()[
   ```bash
     # よく使うサブコマンドのリスト
-    # 筆者はこんな辺りをよく使う…かも
+    # 筆者はこんな辺りをよく使う
+    # 試しに"nix build"と打ってみよう。
+    # ちゃんとサブコマンドが認識されていることがわかるはず。
     nix build
     nix develop
     nix shell
@@ -97,3 +99,4 @@ Nix flakesでは、`nix`というコマンドを主に使います。このコ�
     nix flake
   ```
 ]
+
