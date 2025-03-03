@@ -25,24 +25,28 @@
   fill: luma(240),
   inset: (x: 2pt, y: 0pt),
   outset: (y: 1.5pt),
-  radius: 2pt
+  radius: 2pt,
 )
 #show raw.where(block: true): block.with(
   fill: luma(240),
   inset: 5pt,
-  radius: 4pt
+  radius: 4pt,
 )
 
 #titlepage(title: title, paper: paper, font: font, lang: lang, author: author)
 
-この本を手に取ってくださりありがとうございます。この本は、Nix flakesをいかに活用するかを例示する本となっています。不明点があった場合は私のメールアドレス、`tontonkirikiri@gmail.com`に気軽に連絡してください。この本はGitHubにて管理されているため、リポジトリにイシューを立てていただいても構いません。
+この本を手に取ってくださりありがとうございます。この本は、Nix
+flakesをいかに活用するかを例示する本となっています。不明点があった場合は私のメールアドレス、`tontonkirikiri@gmail.com`に気軽に連絡してください。この本はGitHubにて管理されているため、リポジトリにイシューを立てていただいても構いません。
 
 この本の読者の対象を以下に書きます。
-- レガシーNix#footnote()[ここでは、`nix-shell`や`nix-build`などのコマンド体系を持ち、`default.nix`や`shell.nix`のファイルを取り扱う、通常のNixのことを指す。]のコマンド体系をある程度理解している人。
-- Nix式をある程度読める人#footnote()[`Derivation`や`pkgs.callPackage`を理解しているくらいのレベル感を想定。]。
+- レガシーNix#footnote(
+    )[ここでは、`nix-shell`や`nix-build`などのコマンド体系を持ち、`default.nix`や`shell.nix`のファイルを取り扱う、通常のNixのことを指す。]のコマンド体系をある程度理解している人。
+- Nix式をある程度読める人#footnote(
+    )[`Derivation`や`pkgs.callPackage`を理解しているくらいのレベル感を想定。]。
 
 逆に以下のような人々は対象ではありません。
-- Nixライブラリの実装を深く読んで理解したい人。この本は、Nix flakesをとりあえず使えるようになるためのものなので、flake-utilsの実装などは読みません。
+- Nixライブラリの実装を深く読んで理解したい人。この本は、Nix
+  flakesをとりあえず使えるようになるためのものなので、flake-utilsの実装などは読みません。
 - Nix式がうまく読めない人。この本ではNix flakesのためのNix式がたんまり登場します#footnote()[それでも読みたいなら、スパルタな気分でお読みください。]。
 
 初めて書く本なので拙い部分もあるかと思いますが、よろしくお願いします。
@@ -54,10 +58,15 @@
 
 Nix flakesは、`Nix-v2.4`にて初めて実装されており、それ以降現在のリリースである`Nix-v2.24.11`にも実装されている機能です。この機能は未だに試験的機能#footnote()[翻訳元: experimental features]としてマークされていますが、デファクトスタンダードとして広くNixユーザーに使用されています。
 
-#quote(attribution: "https://nix.dev/manual/nix/2.25/release-notes/rl-2.4.htmlよりDeepL翻訳")[
-  フレークは、Nixベースのプロジェクトを、より発見しやすく、構成可能で、一貫性があり、再現可能な方法でパッケージ化するための新しいフォーマットです。フレークは、他のフレークとの依存関係を指定し、パッケージ、Nixpkgsオーバーレイ、NixOSモジュール、CIテストなどのNixアセットを返すflake.nixという名前のファイルを含むリポジトリまたはtarボールです。例えば、nix run nixpkgs\#helloのようなコマンドは、nixpkgsフレークからhelloアプリケーションを実行します。
+#quote(
+  attribution: "https://nix.dev/manual/nix/2.25/release-notes/rl-2.4.htmlよりDeepL翻訳",
+)[
+  フレークは、Nixベースのプロジェクトを、より発見しやすく、構成可能で、一貫性があり、再現可能な方法でパッケージ化するための新しいフォーマットです。フレークは、他のフレークとの依存関係を指定し、パッケージ、Nixpkgsオーバーレイ、NixOSモジュール、CIテストなどのNixアセットを返すflake.nixという名前のファイルを含むリポジトリまたはtarボールです。例えば、nix
+  run
+  nixpkgs\#helloのようなコマンドは、nixpkgsフレークからhelloアプリケーションを実行します。
 
-  フレークは現在実験的とされている。導入については、このブログ記事を参照してください。フレークのシンタックスとセマンティクスの詳細については、nix flakeマニュアル・ページを参照してください。
+  フレークは現在実験的とされている。導入については、このブログ記事を参照してください。フレークのシンタックスとセマンティクスの詳細については、nix
+  flakeマニュアル・ページを参照してください。
 ]
 
 前提情報はこのくらいですので、一旦Nixが使える状態にしましょう。個人的に、非Nixユーザーから最も簡単なNixの試用方法は、Docker経由での試用が一番だと思っていますので、今回はDockerから試してみましょう。以下のBashコマンドを実行してください。

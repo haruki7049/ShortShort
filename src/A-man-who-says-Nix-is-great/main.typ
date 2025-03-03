@@ -1,4 +1,3 @@
-#import "../utils.typ": titlepage
 #import "@preview/codelst:2.0.2": sourcecode
 
 #let font = ("IPAexGothic", "IPAexMincho")
@@ -6,6 +5,28 @@
 #let lang = "ja"
 #let paper = "jis-b6"
 #let author = "haruki7049 <tontonkirikiri@gmail.com>"
+
+#let titlepage(
+  title: "EXAMPLE_TITLE",
+  paper: "a4",
+  author: "haruki7049 <tontonkirikiri@gmail.com>",
+  font: "IPAexMincho",
+  lang: "ja",
+) = {
+  page(
+    paper: paper,
+    footer: [
+      #set align(right)
+      #author
+    ],
+  )[
+    #underline()[
+      #text(size: 2.5em, lang: "ja", font: font)[
+        #title
+      ]
+    ]
+  ]
+}
 
 #set page(
   paper: paper,
@@ -25,12 +46,12 @@
   fill: luma(240),
   inset: (x: 2pt, y: 0pt),
   outset: (y: 1.5pt),
-  radius: 2pt
+  radius: 2pt,
 )
 #show raw.where(block: true): block.with(
   fill: luma(240),
   inset: 5pt,
-  radius: 4pt
+  radius: 4pt,
 )
 
 #titlepage(title: title, paper: paper, font: font, lang: lang, author: author)
