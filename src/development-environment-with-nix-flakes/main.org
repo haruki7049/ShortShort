@@ -9,10 +9,8 @@
 flakesをいかに活用するかを例示する本となっています。不明点があった場合は私のメールアドレス、`tontonkirikiri@gmail.com`に気軽に連絡してください。この本はGitHubにて管理されているため、リポジトリにイシューを立てていただいても構いません。
 
 この本の読者の対象を以下に書きます。
-- レガシーNix[fn:nix-command-structure]のコマンド体系をある程度理解している人。
-- Nix式をある程度読める人[fn:: Derivation`や`pkgs.callPackage`を理解しているくらいのレベル感を想定。]。
-
-[fn:nix-command-structure] ここでは、`nix-shell`や`nix-build`などのコマンド体系を持ち、`default.nix`や`shell.nix`のファイルを取り扱う、通常のNixのことを指す。
+- レガシーNix[fn:1]のコマンド体系をある程度理解している人。
+- Nix式をある程度読める人[fn:2]。
 
 逆に以下のような人々は対象ではありません。
 - Nixライブラリの実装を深く読んで理解したい人。この本は、Nix flakesをとりあえず使えるようになるためのものなので、flake-utilsの実装などは読みません。
@@ -51,7 +49,6 @@ Bashプロンプトが表示されたら、以下のコマンド群を入力し�
 
 Nix flakesでは、~nix~というコマンドを主に使います。このコマンドにはサブコマンドがたくさん用意されています。~man nix~で検索してみましょう。
 
-
 #+begin_src sh
   # よく使うサブコマンドのリスト
   # 筆者はこんな辺りをよく使う
@@ -64,9 +61,7 @@ Nix flakesでは、~nix~というコマンドを主に使います。このコ�
   nix flake
 #+end_src
 
+* 脚注
 
-hoge[fn:1]
-
-* Footnotes
-
-[fn:1]
+[fn:1] ここでは、`nix-shell`や`nix-build`などのコマンド体系を持ち、`default.nix`や`shell.nix`のファイルを取り扱う、通常のNixのことを指す。
+[fn:2] Derivation`や`pkgs.callPackage`を理解しているくらいのレベル感を想定。
