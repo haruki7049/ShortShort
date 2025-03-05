@@ -61,7 +61,7 @@ Nix flakesでは、~nix~というコマンドを主に使います。このコ�
   nix flake
 #+end_src
 
-* 脚注
+* Footnotes
 
-[fn:1] ここでは、`nix-shell`や`nix-build`などのコマンド体系を持ち、`default.nix`や`shell.nix`のファイルを取り扱う、通常のNixのことを指す。
+[fn:1] ここでは、\inline{}nix-shell\inline{}や`nix-build`などのコマンド体系を持ち、`default.nix`や`shell.nix`のファイルを取り扱う、通常のNixのことを指す。
 [fn:2] Derivation`や`pkgs.callPackage`を理解しているくらいのレベル感を想定。
