@@ -35,8 +35,6 @@
           devShells.default = pkgs.mkShell {
             nativeBuildInputs = [
               pkgs.nil
-              pkgs.tinymist
-              pkgs.typst
             ];
 
             buildInputs = [
