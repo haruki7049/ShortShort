@@ -1,69 +1,13 @@
-#import "@preview/codelst:2.0.2": sourcecode
+#+language: Japanese
+#+email: tontonkirikiri@gmail.com
+#+author: haruki7049
+#+title: Nixはいいぞおじさん「Nixはいいぞ」
 
-#let font = ("IPAexGothic", "IPAexMincho")
-#let title = "Nixはいいぞおじさん「Nixはいいぞ」"
-#let lang = "ja"
-#let paper = "jis-b6"
-#let author = "haruki7049 <tontonkirikiri@gmail.com>"
-
-#let titlepage(
-  title: "EXAMPLE_TITLE",
-  paper: "a4",
-  author: "haruki7049 <tontonkirikiri@gmail.com>",
-  font: "IPAexMincho",
-  lang: "ja",
-) = {
-  page(
-    paper: paper,
-    footer: [
-      #set align(right)
-      #author
-    ],
-  )[
-    #underline()[
-      #text(size: 2.5em, lang: "ja", font: font)[
-        #title
-      ]
-    ]
-  ]
-}
-
-#set page(
-  paper: paper,
-  footer: context [
-    #set align(center)
-    #text(font: font, lang: lang, size: 1em)[
-      #counter(page).display("1")
-    ]
-  ],
-)
-#set text(font: font, size: 0.75em, lang: lang)
-#set document(title: title, author: author)
-#set heading(numbering: "1.")
-#set quote(block: true)
-
-#show raw.where(block: false): box.with(
-  fill: luma(240),
-  inset: (x: 2pt, y: 0pt),
-  outset: (y: 1.5pt),
-  radius: 2pt,
-)
-#show raw.where(block: true): block.with(
-  fill: luma(240),
-  inset: 5pt,
-  radius: 4pt,
-)
-
-#titlepage(title: title, paper: paper, font: font, lang: lang, author: author)
-
-#outline()
-#pagebreak()
-
-= おじさん登場
+* おじさん登場
 
 公園のベンチに座っていると、その人は私に呟き始めた。いや、呟くにしては声量が大きかったから、やはり私に話しかけていたのだろうか。
 
-「Nixはいいぞ」\
+「Nixはいいぞ」\\
 「…？」
 
 この人は急に何を言っているのだろうか。というかNixってなに…？
@@ -82,7 +26,7 @@
 
 考えが至った瞬間、私はすぐにベンチを立ち、そのあからさまに怪しいおじさんの手を掴んでいた。
 
-「そのNix、教えて！！」\
+「そのNix、教えて！！」\\
 「…ぇ」
 
-= 気弱なおじさんによるNixの概要
+* 気弱なおじさんによるNixの概要
