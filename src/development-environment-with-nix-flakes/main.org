@@ -20,10 +20,10 @@ flakesをいかに活用するかを例示する本となっています。不�
 
 * とりあえずNix flakesに触れてみる
 
-Nix flakesは、`Nix-v2.4`にて初めて実装されており、それ以降現在のリリースである`Nix-v2.24.11`にも実装されている機能です。この機能は未だに試験的機能[fn:: 翻訳元: experimental features]としてマークされていますが、デファクトスタンダードとして広くNixユーザーに使用されています。
+Nix flakesは、 =Nix-v2.4= にて初めて実装されており、それ以降現在のリリースである =Nix-v2.24.11= にも実装されている機能です。この機能は未だに試験的機能[fn:3]としてマークされていますが、デファクトスタンダードとして広くNixユーザーに使用されています。
 
 #+begin_quote
-フレークは、Nixベースのプロジェクトを、より発見しやすく、構成可能で、一貫性があり、再現可能な方法でパッケージ化するための新しいフォーマットです。フレークは、他のフレークとの依存関係を指定し、パッケージ、Nixpkgsオーバーレイ、NixOSモジュール、CIテストなどのNixアセットを返すflake.nixという名前のファイルを含むリポジトリまたはtarボールです。例えば、nix run nixpkgs\#helloのようなコマンドは、nixpkgsフレークからhelloアプリケーションを実行します。
+フレークは、Nixベースのプロジェクトを、より発見しやすく、構成可能で、一貫性があり、再現可能な方法でパッケージ化するための新しいフォーマットです。フレークは、他のフレークとの依存関係を指定し、パッケージ、Nixpkgsオーバーレイ、NixOSモジュール、CIテストなどのNixアセットを返すflake.nixという名前のファイルを含むリポジトリまたはtarボールです。例えば、 ~nix run nixpkgs\#hello~ のようなコマンドは、nixpkgsフレークからhelloアプリケーションを実行します。
 フレークは現在実験的とされている。導入については、このブログ記事を参照してください。フレークのシンタックスとセマンティクスの詳細については、nix flakeマニュアル・ページを参照してください。
 
 -- https://nix.dev/manual/nix/2.25/release-notes/rl-2.4.htmlよりDeepL翻訳
@@ -47,7 +47,7 @@ Bashプロンプトが表示されたら、以下のコマンド群を入力し�
   nix --version # Nix flakesな方
 #+end_src
 
-Nix flakesでは、~nix~というコマンドを主に使います。このコマンドにはサブコマンドがたくさん用意されています。~man nix~で検索してみましょう。
+Nix flakesでは、 ~nix~ というコマンドを主に使います。このコマンドにはサブコマンドがたくさん用意されています。 ~man nix~ で検索してみましょう。
 
 #+begin_src sh
   # よく使うサブコマンドのリスト
@@ -63,5 +63,6 @@ Nix flakesでは、~nix~というコマンドを主に使います。このコ�
 
 * Footnotes
 
-[fn:1] ここでは、src_sh{nix-shell}やsrc_sh[]{nix-build}などのコマンド体系を持ち、`default.nix`や`shell.nix`のファイルを取り扱う、通常のNixのことを指す。
-[fn:2] Derivation`や`pkgs.callPackage`を理解しているくらいのレベル感を想定。
+[fn:1] ここでは、 ~nix-shell~ や ~nix-build~ などのコマンド体系を持ち、 =default.nix= や =shell.nix= のファイルを取り扱う、通常のNixのことを指す。
+[fn:2] =Derivation= や ~pkgs.callPackage~ を理解しているくらいのレベル感を想定。
+[fn:3] 翻訳元: experimental features
