@@ -63,3 +63,10 @@ Nix flakesでは、~nix~というコマンドを主に使います。このコ�
   nix repl
   nix flake
 #+end_src
+
+
+hoge[fn:1]
+
+* Footnotes
+
+[fn:1]
