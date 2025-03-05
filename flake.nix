@@ -27,21 +27,12 @@
           treefmt = {
             projectRootFile = "flake.nix";
             programs.nixfmt.enable = true;
-            programs.mdformat.enable = true;
-            programs.typstfmt.enable = true;
-            programs.typstyle.enable = true;
           };
 
           devShells.default = pkgs.mkShell {
             nativeBuildInputs = [
               pkgs.nil
             ];
-
-            buildInputs = [
-              pkgs.ipaexfont
-            ];
-
-            TYPST_FONT_PATHS = "${pkgs.ipaexfont}/share/fonts/opentype";
           };
         };
     };
