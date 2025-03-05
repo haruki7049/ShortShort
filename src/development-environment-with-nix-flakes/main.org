@@ -63,5 +63,5 @@ Nix flakesでは、~nix~というコマンドを主に使います。このコ�
 
 * Footnotes
 
-[fn:1] ここでは、src_sh[:exports code]{nix-shell}やsrc_sh[]{nix-build}などのコマンド体系を持ち、`default.nix`や`shell.nix`のファイルを取り扱う、通常のNixのことを指す。
+[fn:1] ここでは、src_sh{nix-shell}やsrc_sh[]{nix-build}などのコマンド体系を持ち、`default.nix`や`shell.nix`のファイルを取り扱う、通常のNixのことを指す。
 [fn:2] Derivation`や`pkgs.callPackage`を理解しているくらいのレベル感を想定。
