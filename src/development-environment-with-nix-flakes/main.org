@@ -67,3 +67,7 @@ Nix flakesでは、 ~nix~ というコマンドを主に使います。このコ
 [fn:2] =Derivation= や ~pkgs.callPackage~ を理解しているくらいのレベル感を想定。
 [fn:3] それでも読みたいなら、スパルタな気分でお読みください。
 [fn:4] 翻訳元: experimental features
+
+* COMMENT
+** TODO
+行数が足りないのでもっと書け!!
