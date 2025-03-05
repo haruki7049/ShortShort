@@ -1,1 +1,4 @@
 .direnv/
+
+# Exported HTML
+*.html
