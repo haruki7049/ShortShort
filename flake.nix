@@ -32,6 +32,8 @@
           devShells.default = pkgs.mkShell {
             nativeBuildInputs = [
               pkgs.nil
+              pkgs.emacs-nox
+              pkgs.gnumake
             ];
           };
         };
