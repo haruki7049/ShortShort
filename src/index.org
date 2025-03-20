@@ -1,0 +1,14 @@
+#+TITLE: Haruki7049's ShortShort
+#+AUTHOR: Haruki7049
+#+EMAIL: tontonkirikiri@gmail.com
+#+DATE: <2025-03-20 Thu>
+#+LANGUAGE: ja
+
+# Solarized light theme
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" />
+
+* Haruki7049's ShortShort
+
+- [[./A-man-who-says-Nix-is-great.org]]
+- [[./Psychospiritual-Affinity.org]]
+- [[./development-environment-with-nix-flakes.org]]

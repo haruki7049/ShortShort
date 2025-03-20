@@ -3,6 +3,9 @@
 #+author: haruki7049
 #+title: Nix flakesのすすめ
 
+# Silarized light theme
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" />
+
 * はじめに
 
 この本を手に取ってくださりありがとうございます。この本は、Nix

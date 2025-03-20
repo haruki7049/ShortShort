@@ -3,6 +3,9 @@
 #+author: haruki7049
 #+title: Nixはいいぞおじさん「Nixはいいぞ」
 
+# Silarized light theme
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" />
+
 * おじさん登場
 
 公園のベンチに座っていると、その人は私に呟き始めた。いや、呟くにしては声量が大きかったから、やはり私に話しかけていたのだろうか。

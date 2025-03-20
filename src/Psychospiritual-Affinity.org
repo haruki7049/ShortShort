@@ -5,6 +5,9 @@
 #+STARTUP: overview
 #+OPTIONS: \n:t
 
+# Silarized light theme
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" />
+
 * 思想
 
 #+begin_quote

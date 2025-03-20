@@ -2,3 +2,4 @@
 
 # Exported HTML
 *.html
+dist/
