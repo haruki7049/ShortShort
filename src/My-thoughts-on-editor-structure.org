@@ -1,0 +1,15 @@
+#+title: 私のエディターの構造の思想
+#+author: haruki7049
+#+email: tontonkirikiri@gmail.com
+#+language: Japanese
+#+STARTUP: overview
+
+# Silarized light theme
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" />
+
+* COMMENT 概要
+とても小さなエディターのコアを作成して、ラッパー言語でそのエディターコアを包んでやるべき。
+
+1. エディターの核となる、何かの極小言語を実装した、とても小さなインタプリタを作成する
+2. 表現力を向上させたラッパー言語を、その極小言語に対して作成する。
+   - これをすることによって、各々のコミュニティーで拡張言語を開発できるようになる。VimScriptとかEmacsLispしか選べない世界はヤダ。自分で選択したい。
