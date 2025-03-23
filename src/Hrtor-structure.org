@@ -4,10 +4,7 @@
 #+language: Japanese
 #+STARTUP: overview
 
-# Silarized light theme
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" />
-
-* COMMENT 概要
+* 概要
 とても小さなエディターのコアを作成して、ラッパー言語でそのエディターコアを包んでやるべき。
 
 1. エディターの核となる、何かの極小言語を実装した、とても小さなインタプリタを作成する

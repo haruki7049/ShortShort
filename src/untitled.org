@@ -4,9 +4,6 @@
 #+language: Japanese
 #+STARTUP: overview
 
-# Silarized light theme
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" />
-
 * COMMENT 思骸界
 
 崩壊していく前作の世界を抜け出して、また別の、物理法則などは前作の世界と似ているが、何か本質が形骸化しているような世界を旅する話。
